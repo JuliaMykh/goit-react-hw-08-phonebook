@@ -13,15 +13,24 @@ export const SpanForm = styled.span`
 export const ButtonForm = styled.button`
     font-family: inherit;
     font-size: 14px;
-    font-weight: 500;
-    background-color: #ae98e1;
+    font-weight: 700;
+    background-color: white;
+    border: solid #d95c5c;
     width: 100px;
     height: 30px;
     border-radius: 5px;
-    border: none;
     cursor: pointer;
     &:hover{
-        background-color: #5b5bd5;
+        color: white;
+        background-color:#d95c5c;
         transform: scale(1.1);
     }
+`;
+
+export const Title = styled.h1`
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #be1111;
+    margin-bottom: 30px;
 `;

@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { Formik, Form, Field } from 'formik';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-import {useGetContactsQuery, useAddContactMutation } from '../../redux/contactsSliceApi';
-import { LabelForm, SpanForm, ButtonForm } from './ContactForm.styled';
+import {useGetContactsQuery, useAddContactMutation } from '../../redux/contacts/contactsSliceApi';
+import { LabelForm, SpanForm, ButtonForm, Title } from './ContactForm.styled';
 import { Loader } from "components/Loader/Loader";
 
 export const ContactForm = () => {
@@ -33,6 +33,8 @@ export const ContactForm = () => {
     return (
         <>
         {result.isLoading && <Loader/>}
+        
+        <Title>Contacts</Title>
 
         <Formik
             initialValues={{ name: '', phone: '' }}

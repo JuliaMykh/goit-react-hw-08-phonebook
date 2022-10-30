@@ -1,6 +1,6 @@
 import React from "react";
 import { ButtonContact } from './ContactItem.styled';
-import { useDeleteContactMutation } from '../../redux/contactsSliceApi';
+import { useDeleteContactMutation } from '../../redux/contacts/contactsSliceApi';
 
 
 export const ContactItem = ({name, phone, id}) => {

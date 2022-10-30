@@ -2,14 +2,15 @@ import styled from "@emotion/styled";
 
 export const ButtonContact = styled.button`
     font-family: inherit;
-    font-weight: 500;
-    background-color: #ae98e1;
+    font-weight: 700;
+    background-color: white;
+    border: solid #d95c5c;
     border-radius: 5px;
     height: 25px;
-    border: none;
     cursor: pointer;
     &:hover{
-        background-color: #5b5bd5;
+        color: white;
+        background-color:#d95c5c;
         transform: scale(1.1);
     }
 `;
