@@ -1,7 +1,3 @@
-import { ContactForm } from './ContactForm/ContactForm';
-import { ContactList } from './ContactList/ContactList';
-import { Filter } from './Filter/Filter';
-
 import { Route, Routes } from 'react-router-dom';
 
 import { Layout } from './Layout';
