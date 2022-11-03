@@ -1,4 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import authOperetions from 'redux/auth/authOperations';
 
 import Layout from './Layout';
 import HomePage from 'pages/HomePage/HomePage';
@@ -9,6 +12,11 @@ import ContactsPage from 'pages/ContactsPage/ContactsPage';
 
 
 export function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(authOperetions.refreshCurrentUser());
+  }, [dispatch])
 
   return (
 
