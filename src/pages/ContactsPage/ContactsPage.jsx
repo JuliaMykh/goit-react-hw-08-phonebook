@@ -16,6 +16,7 @@ const ContactsPage = () => {
       ) : (
         <p>Contact list is empty</p>
       )}
+        
             
         </>
     )

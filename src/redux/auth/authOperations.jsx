@@ -18,7 +18,7 @@ const register = createAsyncThunk('auth/registr', async user => {
         return data;
     }
     catch (error) {
-        console.log(error);
+        alert(error.message);
     }
 });
 
@@ -28,7 +28,7 @@ const logIn = createAsyncThunk('auth/login', async user => {
         token.set(data.token);
         return data;
     } catch (error) {
-        console.log(error);
+        alert(error.message);
     }
 });
 
@@ -37,7 +37,7 @@ const logOut = createAsyncThunk('auth/logout', async () => {
         await axios.post('/users/logout');
         token.unset();
     } catch (error) {
-        console.log(error);
+        alert(error.message);
     }
 });
 
