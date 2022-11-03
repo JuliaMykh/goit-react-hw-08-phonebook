@@ -35,6 +35,12 @@ export const authSlice = createSlice({
         state.token = null;
         state.isLoggedIn = false;
       },
+      [authOperetions.refreshCurrentUser.pending](state) {
+      state.isRefreshing = true;
+      },
+      [authOperetions.refreshCurrentUser.rejected](state) {
+      state.isRefreshing = false;
+      },
       [authOperetions.refreshCurrentUser.fulfilled](state, action) {
       state.user = action.payload;
       state.isLoggedIn = true;

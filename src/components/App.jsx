@@ -9,8 +9,6 @@ import RegisterPage from 'pages/RegisterPage/RegisterPage';
 import LoginPage from 'pages/LoginPage/LoginPage';
 import ContactsPage from 'pages/ContactsPage/ContactsPage';
 
-
-
 export function App() {
   const dispatch = useDispatch();
 
@@ -19,7 +17,6 @@ export function App() {
   }, [dispatch])
 
   return (
-
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -29,8 +26,7 @@ export function App() {
           <Route path="/contacts" element={<ContactsPage />}></Route>
         </Route>
       </Routes>
-    </>
-    
+    </>  
 )
   
 }; 
