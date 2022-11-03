@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import authOperetions from 'redux/auth/authOperations';
 
+
 import Layout from './Layout';
 import HomePage from 'pages/HomePage/HomePage';
 import RegisterPage from 'pages/RegisterPage/RegisterPage';
@@ -18,7 +19,8 @@ export function App() {
 
   return (
     <>
-      <Routes>
+      
+        <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="/register" element={<RegisterPage />}></Route>
@@ -26,6 +28,7 @@ export function App() {
           <Route path="/contacts" element={<ContactsPage />}></Route>
         </Route>
       </Routes>
+      
     </>  
 )
   
