@@ -12,13 +12,13 @@ export const ContactForm = () => {
     // console.log(result);
     const { data: contacts } = useGetContactsQuery();
 
-    const handleSubmit = ({ name, phone }, { resetForm }) => {
-        // console.log({ name, phone });
+    const handleSubmit = ({ name, number }, { resetForm }) => {
+        // console.log({ name, number });
         contacts.some(contact => contact.name.toLowerCase() === name.toLowerCase())
             ? Notify.failure(
                 `${name} is already in contacts.`,
             )
-            : addContact({ name, phone }) && resetForm();
+            : addContact({ name, number }) && resetForm();
         
         
     };
@@ -37,7 +37,7 @@ export const ContactForm = () => {
         <Title>Contacts</Title>
 
         <Formik
-            initialValues={{ name: '', phone: '' }}
+            initialValues={{ name: '', number: '' }}
             onSubmit={handleSubmit}
         >
             <Form >
@@ -55,7 +55,7 @@ export const ContactForm = () => {
                     <SpanForm> Number</SpanForm>
                     <Field
                         type="tel"
-                        name="phone"
+                        name="number"
                         pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                         required

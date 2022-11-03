@@ -28,11 +28,11 @@ export const ContactList = () => {
         {isLoading ? (<Loader />) : ''}
 
         {contacts && 
-        filtredContacts().map(({name, phone, id}) => {
+        filtredContacts().map(({name, number, id}) => {
           return (
             <ItemContact key={id}>
 
-              <ContactItem name={name} phone={phone} id={id} />
+              <ContactItem name={name} number={number} id={id} />
 
             </ItemContact>
             
