@@ -12,9 +12,9 @@ export const ContactList = () => {
   const filter = useSelector(state => state.filter);
   // console.log(refetch);
 
-  // useEffect(() => {
-  //   refetch();
-  // }, [refetch]);
+  useEffect(() => {
+    refetch();
+  }, [refetch]);
     
   const filtredContacts = () => {
       if (!filter) {
