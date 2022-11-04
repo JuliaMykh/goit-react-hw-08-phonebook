@@ -19,6 +19,12 @@ export const InputTitle = styled.span`
     font-weight: 600;
 `;
 
+export const Box = styled.div`
+    width: 320px;
+    margin: 0 auto;
+    padding: 50px 10px 50px 10px;
+`;
+
 // export const LoginBtn = styled.button`
 //     display: flex;
 //     align-items: center;

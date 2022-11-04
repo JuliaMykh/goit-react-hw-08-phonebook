@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 
 import authOperetions from 'redux/auth/authOperations';
-import { Title, RegisterLabel, InputTitle } from './RegisterForm.styled';
+import { Title, RegisterLabel, InputTitle, Box } from './RegisterForm.styled';
 
 export const RegisterForm = () => {
     const dispatch = useDispatch();
@@ -18,7 +18,7 @@ export const RegisterForm = () => {
     }
 
     return(
-        <div>
+        <Box>
             <Title>Register Form</Title>
             <Formik
                 initialValues={{  name: '', email: '', password: '' }}
@@ -39,10 +39,10 @@ export const RegisterForm = () => {
                     <RegisterLabel
                         name="password"
                         type="password" />
-                    <Button variant="contained" color="error" size="small" type="submit">Register</Button>
+                        <Button variant="contained" color="error" size="small" type="submit">Register</Button>
                 </Form>
 
             </Formik>
-        </div>
+        </Box>
     )
 }

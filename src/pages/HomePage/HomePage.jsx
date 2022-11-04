@@ -1,10 +1,12 @@
-import { HomeTitle, HomePageBox } from './HomePage.styled';
+import { HomePageBox, Image } from './HomePage.styled';
+import homeBg from '../../components/Images/homeBg.jpg'
 
 const HomePage = () => {
 
     return (
         <HomePageBox>
-            <HomeTitle>Phonebook</HomeTitle>
+            <Image src={homeBg} alt="Phone book" />
+            {/* <HomeTitle>Phonebook</HomeTitle> */}
         </HomePageBox>
     )
 };

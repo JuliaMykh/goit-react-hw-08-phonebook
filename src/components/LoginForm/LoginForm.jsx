@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import authOperetions from 'redux/auth/authOperations';
 import Button from '@mui/material/Button';
 
-import { Title, LoginLabel, InputTitle } from './LoginForm.styled';
+import { Title, LoginLabel, InputTitle, Box } from './LoginForm.styled';
 
 export const LoginForm = () => {
     const dispatch = useDispatch();
@@ -18,7 +18,7 @@ export const LoginForm = () => {
 
     return (
 
-        <div>
+        <Box>
             <Title>Log in</Title>
             <Formik
                 initialValues={{ email: "", password: "" }}
@@ -37,6 +37,6 @@ export const LoginForm = () => {
                     <Button variant="contained" color="error" size="small" type="submit">Log in</Button>
                 </Form>
             </Formik>
-        </div>
+        </Box>
     )
 };

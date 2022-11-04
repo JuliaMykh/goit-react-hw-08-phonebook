@@ -12,3 +12,10 @@ export const HomePageBox = styled.div`
     justify-content: center;
     min-height: calc(100vh - 50px);
 `;
+
+export const Image = styled.img`
+    display: block;
+    max-width: 100%;
+    height: auto;
+`;
+

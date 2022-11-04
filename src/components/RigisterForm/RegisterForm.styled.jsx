@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
-import { Field } from "formik";
+import { Field, Form } from "formik";
 
 export const Title = styled.h1`
     font-size: 26px;
     text-transform: uppercase;
+    /* text-align: center; */
     font-weight: 700;
     color: #be1111;
     margin-bottom: 30px;
@@ -15,9 +16,28 @@ export const RegisterLabel = styled(Field)`
     margin-bottom: 20px;
 `;
 
+export const BoxForm = styled(Form)`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`;
+
 export const InputTitle = styled.span`
     font-weight: 600;
 `;
+
+export const Box = styled.div`
+    width: 320px;
+    margin: 0 auto;
+    padding: 50px 10px 50px 10px;
+`;
+
+// export const BoxBtn = styled.div`
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// `;
 
 // export const RegisterBtn = styled.button`
 //     display: flex;
