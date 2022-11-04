@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect,  lazy, Suspense } from 'react';
 import authOperetions from 'redux/auth/authOperations';
 import { Loader } from './Loader/Loader';
-import PrivateRoute from './PrivateRoute';
-import PublicRoute from './PublicRoute';
+import {PrivateRoute} from './PrivateRoute';
+import {PublicRoute} from './PublicRoute';
 import  NotFound  from '../components/NotFound/NotFound';
 
 const Layout = lazy(() => import('./Layout')) ;
