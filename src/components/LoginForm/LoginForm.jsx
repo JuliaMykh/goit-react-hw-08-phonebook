@@ -1,5 +1,4 @@
 import { Formik, Form } from 'formik';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import authOperetions from 'redux/auth/authOperations';
 import Button from '@mui/material/Button';
@@ -8,12 +7,10 @@ import { Title, LoginLabel, InputTitle, Box } from './LoginForm.styled';
 
 export const LoginForm = () => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
 
     const handleSubmitLogin = ({email, password}, ) => {
         console.log(email, password);
         dispatch(authOperetions.logIn({ email, password }));
-        navigate('/contacts');
     }
 
     return (

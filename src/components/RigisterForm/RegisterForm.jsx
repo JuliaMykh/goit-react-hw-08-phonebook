@@ -1,6 +1,5 @@
 import { Formik, Form } from 'formik';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 
 import authOperetions from 'redux/auth/authOperations';
@@ -8,13 +7,11 @@ import { Title, RegisterLabel, InputTitle, Box } from './RegisterForm.styled';
 
 export const RegisterForm = () => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
 
-    const handleSubmitRegister = ({ name, email, password }, { resetForm }) => {
+    const handleSubmitRegister = ({ name, email, password }, ) => {
         console.log({ name, email, password });
         dispatch(authOperetions.register({ name, email, password }));
-        navigate('/contacts');
-        resetForm();
+        // resetForm();
     }
 
     return(
