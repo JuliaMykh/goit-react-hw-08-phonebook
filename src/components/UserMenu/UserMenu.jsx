@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 
 import { getName } from '../../redux/auth/authSelectors';
 import authOperetions from 'redux/auth/authOperations';
-import { UserMenuBox, UserMenuText, UserMenuName, UserMenuBtn } from './UserMenu.styled';
+import { UserMenuBox, UserMenuText, UserMenuName } from './UserMenu.styled';
 
 export const UserMenu = () => {
 
