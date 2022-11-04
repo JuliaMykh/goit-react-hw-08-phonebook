@@ -2,8 +2,9 @@ import { Formik, Form } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import authOperetions from 'redux/auth/authOperations';
+import Button from '@mui/material/Button';
 
-import { Title, LoginLabel, InputTitle, LoginBtn } from './LoginForm.styled';
+import { Title, LoginLabel, InputTitle } from './LoginForm.styled';
 
 export const LoginForm = () => {
     const dispatch = useDispatch();
@@ -33,7 +34,7 @@ export const LoginForm = () => {
                     <LoginLabel
                         name="password"
                         type="password" />
-                    <LoginBtn type="submit">Log in</LoginBtn>
+                    <Button variant="contained" color="error" size="small" type="submit">Log in</Button>
                 </Form>
             </Formik>
         </div>

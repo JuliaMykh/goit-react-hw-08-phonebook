@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { Formik, Form, Field } from 'formik';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import Button from '@mui/material/Button';
 
 import {useGetContactsQuery, useAddContactMutation } from '../../redux/contacts/contactsSliceApi';
-import { LabelForm, SpanForm, ButtonForm, Title } from './ContactForm.styled';
+import { LabelForm, SpanForm, Title } from './ContactForm.styled';
 import { Loader } from "components/Loader/Loader";
 
 export const ContactForm = () => {
@@ -61,7 +62,7 @@ export const ContactForm = () => {
                         required
                     />
                 </LabelForm>
-                    <ButtonForm type="submit" disabled={result.isLoading} >Add Contact</ButtonForm>
+                    <Button variant="outlined" color="error" size="small" type="submit" disabled={result.isLoading} >Add Contact</Button>
             </Form>
             </Formik>
             

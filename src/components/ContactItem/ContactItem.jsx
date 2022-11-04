@@ -1,6 +1,7 @@
 import React from "react";
-import { ButtonContact } from './ContactItem.styled';
 import { useDeleteContactMutation } from '../../redux/contacts/contactsSliceApi';
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 export const ContactItem = ({name, number, id}) => {
@@ -10,14 +11,14 @@ export const ContactItem = ({name, number, id}) => {
     return (
         <>
             <p>{name} : {number} </p>
-            <ButtonContact
+            <Button variant="outlined" startIcon={<DeleteIcon />} color="error" size="small"
                 type="button"
                 onClick={() => deleteContact(id)}
                 contactId={id}
                 disabled={result.isLoading}
             >
                 Delete
-            </ButtonContact>
+            </Button>
             
         </>
     )

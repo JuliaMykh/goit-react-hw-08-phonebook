@@ -1,9 +1,10 @@
 import { Formik, Form } from 'formik';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 import authOperetions from 'redux/auth/authOperations';
-import { Title, RegisterLabel, InputTitle, RegisterBtn } from './RegisterForm.styled';
+import { Title, RegisterLabel, InputTitle } from './RegisterForm.styled';
 
 export const RegisterForm = () => {
     const dispatch = useDispatch();
@@ -38,7 +39,7 @@ export const RegisterForm = () => {
                     <RegisterLabel
                         name="password"
                         type="password" />
-                    <RegisterBtn type="submit">Register</RegisterBtn>
+                    <Button variant="contained" color="error" size="small" type="submit">Register</Button>
                 </Form>
 
             </Formik>

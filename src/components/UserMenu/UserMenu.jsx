@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 import { getName } from '../../redux/auth/authSelectors';
 import authOperetions from 'redux/auth/authOperations';
@@ -20,9 +21,9 @@ export const UserMenu = () => {
     return (
         <UserMenuBox >
       <UserMenuText >Welcome, <UserMenuName>{user} !</UserMenuName> </UserMenuText>
-      <UserMenuBtn type="button" onClick = {onLogOut} >
+      <Button variant="contained" color="error" size="small" type="button" onClick = {onLogOut} >
         Logout
-      </UserMenuBtn>
+      </Button>
     </UserMenuBox>
     )
 }
