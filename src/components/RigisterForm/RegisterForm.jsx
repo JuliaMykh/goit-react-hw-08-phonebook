@@ -11,7 +11,6 @@ export const RegisterForm = () => {
     const handleSubmitRegister = ({ name, email, password }, ) => {
         console.log({ name, email, password });
         dispatch(authOperetions.register({ name, email, password }));
-        // resetForm();
     }
 
     return(
