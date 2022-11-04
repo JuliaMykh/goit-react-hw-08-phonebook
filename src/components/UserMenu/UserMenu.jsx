@@ -5,7 +5,6 @@ import { getName } from '../../redux/auth/authSelectors';
 import authOperetions from 'redux/auth/authOperations';
 import { UserMenuBox, UserMenuText, UserMenuName, UserMenuBtn } from './UserMenu.styled';
 
-
 export const UserMenu = () => {
 
   const dispatch = useDispatch();

@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect,  lazy, Suspense } from 'react';
 import authOperetions from 'redux/auth/authOperations';
 import { Loader } from './Loader/Loader';
-// import  NotFound  from '../components/NotFound/NotFound';
-
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
+import  NotFound  from '../components/NotFound/NotFound';
 
 const Layout = lazy(() => import('./Layout')) ;
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
@@ -15,7 +16,7 @@ const ContactsPage = lazy(() => import('pages/ContactsPage/ContactsPage'));
 export function App() {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(state => state.auth.isRefreshing);
-  console.log(isRefreshing);
+  // console.log(isRefreshing);
 
   useEffect(() => {
     dispatch(authOperetions.refreshCurrentUser());
@@ -27,11 +28,11 @@ export function App() {
         {!isRefreshing && (
 <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="/register" element={<RegisterPage />}></Route>
-          <Route path="/login" element={<LoginPage />}></Route>
-          <Route path="/contacts" element={<ContactsPage />}></Route>
-          {/* <Route path="*" element={<NotFound />}></Route> */}
+          <Route index element={<PublicRoute><HomePage /></PublicRoute>} />
+          <Route path="/register" element={<PublicRoute restricted><RegisterPage /></PublicRoute>}></Route>
+          <Route path="/login" element={<PublicRoute restricted><LoginPage /></PublicRoute>}></Route>
+          <Route path="/contacts" element={<PrivateRoute ><ContactsPage /></PrivateRoute>}></Route>
+          <Route path="*" element={<PublicRoute><NotFound /></PublicRoute>}></Route>
         </Route>
       </Routes>
         ) }

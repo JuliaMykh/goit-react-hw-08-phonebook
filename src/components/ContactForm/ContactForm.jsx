@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Formik, Form, Field } from 'formik';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 

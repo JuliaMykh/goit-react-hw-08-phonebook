@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useSelector } from 'react-redux';
 
 import { ItemContact } from './ContactList.styled';
@@ -8,8 +8,13 @@ import { Loader } from '../Loader/Loader';
 
 export const ContactList = () => {
 
-  const { data: contacts, error, isLoading } = useGetContactsQuery();
+  const { data: contacts, error, isLoading, refetch } = useGetContactsQuery();
   const filter = useSelector(state => state.filter);
+  // console.log(refetch);
+
+  // useEffect(() => {
+  //   refetch();
+  // }, [refetch]);
     
   const filtredContacts = () => {
       if (!filter) {
